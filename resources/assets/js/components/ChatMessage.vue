@@ -1,7 +1,6 @@
 <template>
     <div class="chat-message">
-        <p>{{message.message}}</p>
-        <small>{{message.user.name}}</small>
+        <span class="badge">{{message.user.name}}</span> {{message.message}}
     </div>
 </template>
 
@@ -13,7 +12,9 @@
 
 <style>
     .chat-message {
+        font-size:24px;
         padding: 1rem;
+
     }
 
     .chat-message > p {
@@ -21,6 +22,10 @@
     }
 
     .chat-message:nth-child(odd) {
-        background: #d6d6d6;
+        background: #d7dee4;
+    }
+
+    .chat-message:nth-child(even) {
+        background: #fcfcff;
     }
 </style>

@@ -29,7 +29,12 @@ const app = new Vue({
         addMessage(message) {
             this.messages.push(message);
             axios.post('/messages', message).then(response => {
+
+            }).then(response => {
+                var objDiv = document.getElementById("chat-log");
+                objDiv.scrollTop = objDiv.scrollHeight;
             });
+
         }
     },
     created() {
@@ -50,7 +55,7 @@ const app = new Vue({
                 this.messages.push({
                     message: e.message.message,
                     user: e.user
-                });
-            });
+                })
+            })
     }
 });

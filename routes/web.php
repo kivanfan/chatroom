@@ -13,6 +13,8 @@
 
 use App\Events\MessagePosted;
 
+date_default_timezone_set('Asia/Hong_Kong');
+
 Route::get('/', function () {
     return view('chat');
 })->middleware('auth');
@@ -21,13 +23,12 @@ Auth::routes();
 
 
 Route::post('/messages', function () {
-//    return App\Message::with('user')->get();
     $user = Auth::user();
 
     $message = $user->messages()->create([
         'message' => request()->get('message')
     ]);
-    broadcast(new MessagePosted($message,$user))->toOthers();
+    broadcast(new MessagePosted($message, $user))->toOthers();
 
     return ['status' => 'OK'];
 })->middleware('auth');
