@@ -1,6 +1,6 @@
 <template>
     <div class="chat-message">
-        <span class="badge">{{message.user.name}}</span> {{message.message}}
+        <span class="badge username">{{message.user.name}}</span> {{message.message}}
     </div>
 </template>
 
@@ -12,11 +12,12 @@
 
 <style>
     .chat-message {
-        font-size:24px;
-        padding: 1rem;
-
+        font-size:16px;
+        padding: 0.6rem 1rem;
     }
-
+    .username{
+        margin-right:0.3rem;
+    }
     .chat-message > p {
         margin-bottom: .5rem;
     }

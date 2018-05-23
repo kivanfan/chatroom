@@ -34,7 +34,6 @@ const app = new Vue({
                 var objDiv = document.getElementById("chat-log");
                 objDiv.scrollTop = objDiv.scrollHeight;
             });
-
         }
     },
     created() {

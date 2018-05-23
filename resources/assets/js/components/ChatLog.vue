@@ -14,7 +14,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     .empty {
         padding: 1rem;
         text-align: center;
@@ -22,11 +22,17 @@
 
     .chat-log {
         position: relative;
-        widht: 100%;
+        width: 100%;
         background: #FFF;
-        height: 500px;
+        height: 600px;
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+    @media (max-width: 767.98px) {
+        .chat-log {
+            height: 450px;
+        }
     }
 
     ::-webkit-scrollbar {
