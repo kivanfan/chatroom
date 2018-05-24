@@ -24,7 +24,7 @@
         position: relative;
         width: 100%;
         background: #FFF;
-        height: 600px;
+        height: 500px;
         overflow-x: hidden;
         overflow-y: auto;
     }
